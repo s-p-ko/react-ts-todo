@@ -4,8 +4,8 @@ import { ITodo } from '../types/data';
 
 interface ITodoListProps {
   items: ITodo[];
-  removeTodo: (id: number) => void;
-  toggleTodo: (id: number) => void;
+  removeTodo: (id: string) => void;
+  toggleTodo: (id: string) => void;
 }
 
 const TodoList: React.FC<ITodoListProps> = (props) => {

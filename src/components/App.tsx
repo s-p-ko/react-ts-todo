@@ -22,7 +22,7 @@ const App: React.FC = ()=> {
   const addTodo = () => {
     if (value) {
       setTodos([...todos, {
-        id: Date.now(),
+        id: Math.random().toString(36).substr(2,9),
         title: value,
         complete: false,
       }])
@@ -30,11 +30,11 @@ const App: React.FC = ()=> {
     }
   }
 
-  const removeTodo = (id: number): void => {
+  const removeTodo = (id: string): void => {
     setTodos(todos.filter(todo => todo.id !== id))
   }
 
-  const toggleTodo = (id: number): void => {
+  const toggleTodo = (id: string): void => {
     setTodos(todos.map(todo => {
       if(todo.id !== id) return todo;
 
