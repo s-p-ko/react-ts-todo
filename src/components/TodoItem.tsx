@@ -1,9 +1,4 @@
-import { ITodo } from '../types/data';
-
-interface ITodoItem extends ITodo {
-  removeTodo: (id: string) => void;
-  toggleTodo: (id: string) => void;
-}
+import { ITodoItem } from '../types/data';
 
 const TodoItem: React.FC<ITodoItem> = (props) => {
   const {id, title, complete, removeTodo, toggleTodo} = props;
